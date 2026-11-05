@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskFlow — Список задач</title>
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+<body>
+
+    <main class="app">
+        <header class="header">
+            <div class="logo">TaskFlow</div>
+            <p class="subtitle">Твой личный планировщик задач</p>
+        </header>
+
+        <section class="task-section">
+            <h1>Мои задачи</h1>
+            <p class="description">Планируй свой день и достигай целей.</p>
+
+            <form id="task-form" class="task-form">
+                <input
+                    type="text"
+                    id="task-input"
+                    placeholder="Введите новую задачу..."
+                    autocomplete="off"
+                >
+                <button type="submit" id="add-button">Добавить</button>
+            </form>
+
+            <p id="error-message" class="error-message"></p>
+
+            <div class="task-info">
+                <span>Всего задач: <strong id="total-count">0</strong></span>
+                <span>Выполнено: <strong id="completed-count">0</strong></span>
+            </div>
+
+            <ul id="task-list" class="task-list"></ul>
+
+            <p id="empty-message" class="empty-message">
+                Пока нет задач. Добавь свою первую!
+            </p>
+
+            <button id="clear-completed" class="clear-button">
+                Удалить выполненные
+            </button>
+        </section>
+
+        <footer>
+            <p>TaskFlow © 2026 | Лабораторная работа №10</p>
+        </footer>
+    </main>
+
+    <script type="module" src="./src/main.js"></script>
+</body>
+</html>
